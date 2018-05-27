@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1>Employee Records</h1>
+<h2>Name:{{employeeObj.name}}</h2>
+<h2>City:{{employeeObj.city}}</h2>
+<h2>Age:{{employeeObj.age}}</h2>
+<br/>
+
+<input type="text" [(ngModel)]="empId" >
+
+<button (click)="getEmployeeDetails()">Get Details of Employee</button>
+
+
+<h1>Contry Details</h1>
+<h2>Name:{{countryObj.name}}</h2>
+<h2>Capital:{{countryObj.capital}}</h2>
+<h2>Currency:{{countryObj.currencies[0].code}}</h2>
+
+<button (click)="getContryInfo()">Get Country Details</button>
+
