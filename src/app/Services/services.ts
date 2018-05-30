@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders } from '@angular/common/http';
-import {Http} from '@angular/http';
+import { Http  } from '@angular/http';
+
 @Injectable()
 
 export class ServiceDemo{
@@ -30,8 +30,14 @@ export class ServiceDemo{
 
     }
 
-    public getContryDetails(){
-        let url:string= 'https://restcountries.eu/rest/v2/name/india?fullText=true';
+    public getCountryDetails(countryName:string){
+        let url:string= 'https://restcountries.eu/rest/v2/name/'+countryName+'?fullText=true';
+        return this._Http.get(url);
+    }
+
+    public getCountryName()
+    {
+        let url:string= 'https://restcountries.eu/rest/v2/all';
         return this._Http.get(url);
     }
 

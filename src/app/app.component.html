@@ -14,6 +14,12 @@
 <h2>Name:{{countryObj.name}}</h2>
 <h2>Capital:{{countryObj.capital}}</h2>
 <h2>Currency:{{countryObj.currencies[0].code}}</h2>
-
+<input type="text" [(ngModel)]="countryName">
+<select [(ngModel)]="countryName">
+<option *ngFor="let country of countriesList"  value="{{country.name}}">{{country.name }}</option>
+</select>
 <button (click)="getContryInfo()">Get Country Details</button>
+<br/>
+<br/>
+<img src="{{countryObj.flag}}" width="200px" height="100px">
 
